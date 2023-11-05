@@ -102,7 +102,7 @@ const ProjectDetailPage = ({ params }) => {
                 }
             });
 
-    }, []);
+    }, [id]);
 
     return (
         <div>

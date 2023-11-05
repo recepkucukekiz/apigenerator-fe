@@ -70,7 +70,7 @@ const Login = () => {
 
             <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
               <Link href="/auth/register">
-                Don't have an account? Register here
+                Don not have an account? Register here
               </Link>
             </Form.Item>
           </Form>
