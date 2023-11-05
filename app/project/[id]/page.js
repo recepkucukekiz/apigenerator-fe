@@ -52,7 +52,7 @@ const ProjectDetailPage = ({ params }) => {
     ];
 
     const downloadProject = () => {
-        fetch('http://localhost:3001/projects/generate-project/' + id, {
+        fetch(process.env.NEXT_PUBLIC_API_URL + '/projects/generate-project/' + id, {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`,
             },
@@ -70,7 +70,7 @@ const ProjectDetailPage = ({ params }) => {
     }
 
     useEffect(() => {
-        fetch('http://localhost:3001/projects/' + id, {
+        fetch(process.env.NEXT_PUBLIC_API_URL + '/projects/' + id, {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`,
             },
@@ -84,7 +84,7 @@ const ProjectDetailPage = ({ params }) => {
             .then((response) => response.json())
             .then((data) => setData(data));
 
-        fetch('http://localhost:3001/models/get-all-by-project-id/' + id, {
+        fetch(process.env.NEXT_PUBLIC_API_URL + '/models/get-all-by-project-id/' + id, {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`,
             },

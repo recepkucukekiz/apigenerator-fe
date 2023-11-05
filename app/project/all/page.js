@@ -34,7 +34,7 @@ const AllProjectPage = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:3001/projects', {
+        fetch(process.env.NEXT_PUBLIC_API_URL + '/projects', {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`,
             },

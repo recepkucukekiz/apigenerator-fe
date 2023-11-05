@@ -23,7 +23,7 @@ const AddProjectPage = () => {
             if (values.dbDialect !== 'postgres') {
                 throw new Error('Only postgres dialect is supported!');
             } else {
-                const response = await fetch('http://localhost:3001/projects', {
+                const response = await fetch(process.env.NEXT_PUBLIC_API_URL + '/projects', {
                     method: 'POST',
                     headers: { 
                         Authorization: `Bearer ${localStorage.getItem('token')}` ,
